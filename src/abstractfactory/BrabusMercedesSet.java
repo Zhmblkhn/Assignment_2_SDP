@@ -1,4 +1,6 @@
-public class BrabusMercedesSet  implements MercedesFactory{
+package abstractfactory;
+
+public class BrabusMercedesSet  implements MercedesFactory {
 
     public Brakes getBrakesOfMercedes() {
         return new BrabusBrakesOfMercedes();

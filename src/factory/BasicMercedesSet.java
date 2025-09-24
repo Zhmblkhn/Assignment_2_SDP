@@ -1,4 +1,6 @@
-public class BasicMercedesSet implements MercedesFactory{
+package factory;
+
+public class BasicMercedesSet implements MercedesFactory {
 
     public Brakes getBrakesOfMercedes() {
         return new BasicBrakesOfMercedes();

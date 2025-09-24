@@ -1,3 +1,5 @@
+package abstractfactory;
+
 public interface MercedesFactory {
 
     Brakes getBrakesOfMercedes();

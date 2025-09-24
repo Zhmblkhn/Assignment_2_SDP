@@ -1,3 +1,5 @@
+package factory;
+
 public class BasicBrakesOfMercedes implements Brakes {
 
     public String getName() {
