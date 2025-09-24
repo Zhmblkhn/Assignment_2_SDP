@@ -1,17 +1,12 @@
-import abstractfactories.CarBody;
-import cars.Car;
-import factories.CarFactory;
-import factories.FactoryChecking;
-
-public class Main {
+public  class Main {
     public static void main(String[] args) {
-        CarFactory carFactory = FactoryChecking.getCarFactory("BMW");
+        // Fabric pattern - solve the problem of creating objects of any type with one method, which returns type that depends of logic which described in method.
+        BasicMercedesSet basicmercedes = new BasicMercedesSet();
+        BrabusMercedesSet brabusmercedes = new BrabusMercedesSet();
+        System.out.println(doMercedes(brabusmercedes));
+    }
 
-        // Создаём машину и кузов
-        Car car = carFactory.createCar();
-        CarBody body = carFactory.createCarBody("Sedan");
-
-        car.createCar();
-        body.showBodyInfo();
+    public static String doMercedes(MercedesFactory mercedesFactory) {
+        return mercedesFactory.getBrakesOfMercedes().getName() + " " + mercedesFactory.getEngineOfMercedes().getName();
     }
 }
